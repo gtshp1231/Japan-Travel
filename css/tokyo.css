@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+body {
+	font-family: 'cwTeXHei', sans-serif;
+}
+
+.asideNav {
+	border-left: 10px solid #69D9D4;
+	font-weight: 600;
+	font-size: 120%;
+	padding: 20px;
+}
+
+.navLink, .navLink:visited {
+	color: #19A7B9;
+	text-decoration: none;
+}
+
+.navLink:hover {
+	color: #69D9D4;
+	text-decoration: none;
+}
+
+.navLinkShopping, .navLinkShopping:visited {
+	color: #F02F68;
+	text-decoration: none;
+}
+
+.navLinkShopping:hover {
+	color: #FF6E68;
+	text-decoration: none;
+}
+
+.setDate {
+	border-left: 10px solid #B5A5E0;
+	padding: 20px;
+}
+
+.setDate h3 {
+	color: #A06EF0;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+.hotArticle {
+	border-left: 10px solid #50ABF0;
+	padding: 20px;
+}
+
+.hotArticle h3 {
+	color: #2E5FDD;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+.hotName {
+	font-size: 17px;
+}
+
+.hotView {
+	color: gray;
+}
+
+.media:hover {
+	opacity: 0.6;
+}
+
+.hotLink {
+	color: black;
+}
+
+.hotLink:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.modal-body h5 {
+	font-weight: 700;
+}
+
+.detail {
+	padding-top: 20px;
+}

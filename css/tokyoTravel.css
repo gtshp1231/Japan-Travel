@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+body {
+	font-family: 'cwTeXHei', sans-serif;
+}
+
+#travelTitle {
+	list-style-image: url('../media/torii.png');
+}
+
+#foodTitle {
+	list-style-image: url('../media/meal.png');
+}
+
+#hotelTitle {
+	list-style-image: url('../media/bed.png');
+}
+
+#shoppingTitle {
+	list-style-image: url('../media/shopping_cart.png');
+}
+
+#mainTitle{
+	font-weight: 900;
+}
+
+.titleDivide {
+	border-top: 5px solid black;
+}
+
+.tokyoNav {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	padding: 20px;
+	background: #69D9D4;
+}
+
+.media:hover {
+	opacity: 0.6;
+}
+
+.intro, .intro:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.intro:hover, .intro h4:hover {
+	color: black;
+	text-decoration: none;
+}

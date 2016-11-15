@@ -1,0 +1,90 @@
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+#carousel-example-generic {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -999;
+}
+
+#carousel-example-generic img {
+  min-height: 100%;
+  min-width: 1000px;
+  width: 100%;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 400px) {
+  img {
+    left: 30%;
+    margin-left: -300px;
+  }
+}
+
+#title {
+  padding-top: 100px;
+}
+
+h1 {
+  color: #313131;
+  font-weight: 900;
+  font-size: 600%;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+#intro {
+  margin-top: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
+
+}
+
+#intro p {
+  font-size: 130%;
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: 700;
+  font-family: 'cwTeXHei', sans-serif;
+}
+
+#links {
+  margin-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.linkInner {
+  padding: 20px;
+  background-color: white;
+  /*margin: 3px;*/
+  font-family: 'cwTeXHei', sans-serif;
+  font-weight: 600;
+  font-size: 110%;
+  color: black;
+  opacity: 0.7;
+}
+
+.linkInner:hover {
+  opacity: 1;
+  color: black;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 400%;
+  }
+
+  #intro {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #intro p {
+    font-size: 120%;
+  }
+  
+  .linkInner {
+    font-size: 100%;
+  }
+}

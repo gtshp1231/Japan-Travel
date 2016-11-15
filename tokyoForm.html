@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TOKYO GO GO</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- jQuery CDN (for Bootstrap JS) -->
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<!-- 最新編譯和最佳化的 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<!-- 選擇性佈景主題 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<!-- 最新編譯和最佳化的 JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/tokyo.css">
+  <link rel="stylesheet" type="text/css" href="css/tokyoTravel.css">
+
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+
+  <script type="text/javascript" src="js/tokyo.js"></script>
+  <script type="text/javascript" src="js/shopData.js"></script>
+
+</head>
+<body>
+
+<!-- 照片輪播 -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="media/carousel_pic1.jpg" alt="TOKYO">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+      <img src="media/carousel_pic2.jpg" alt="TOKYO">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+      <img src="media/carousel_pic3.jpg" alt="TOKYO">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- 巡覽列 -->
+<nav class="navbar navbar-default">
+	<div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="media/tokyogogo.png"></a>
+    </div>
+	<div id="mynav" class="collapse navbar-collapse">
+		<ul class="navbar-nav nav">
+			<li><a href="tokyoTravel.html"><span class="glyphicon glyphicon-map-marker"></span> 必去景點</a></li>
+      <li><a href="tokyoFood.html"><span class="glyphicon glyphicon-cutlery"></span> 必吃美食</a></li>
+      <li><a href="tokyoHotel.html"><span class="glyphicon glyphicon-home"></span> 推薦住宿</a></li>
+      <li><a href="tokyoForm.html"><span class="glyphicon glyphicon-shopping-cart"></span> 訂購行程</a></li>
+      <li><a href="mailto:gtshp1231@hotmail.com"><span class="glyphicon glyphicon-envelope"></span> 聯絡我們</a></li>
+		</ul>
+	</div>
+	</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="previewTitle">
+          <ul id="shoppingTitle">
+            <li><h1 id="mainTitle">訂購行程</h1></li>
+          </ul>
+          <hr class="titleDivide">
+        </div>
+        <div class="previewContent">
+          <form class="form-horizontal" role="form" id="shoppingForm">
+            <h4 class="text-center">基本資料</h4>
+            <hr>
+            <div class="form-group">
+              <label for="inputName" class="col-sm-2 control-label">姓名</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">性別</label>
+                <div class="col-sm-10">
+                  <label class="radio-inline">
+                    <input type="radio" name="inputGender" id="gender1" value="male" required> 男
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inputGender" id="gender2" value="female"> 女
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inputGender" id="gender3" value="other"> 其他
+                  </label>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPhone" class="col-sm-2 control-label">聯絡電話</label>
+              <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputPhone" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="col-sm-2 control-label">電子郵件</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddr" class="col-sm-2 control-label">通訊地址</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputAddr" required>
+              </div>
+            </div>
+            <h4 class="text-center">選擇行程</h4>
+            <hr>
+            <div class="form-group">
+              <label for="inputStartDate" class="col-sm-2 control-label">出發日期</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control selectDate" id="inputStartDate" required>
+              </div>
+              <label for="inputReturnDate" class="col-sm-2 control-label">回程日期</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control selectDate" id="inputReturnDate" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAdult" class="col-sm-2 control-label">大人</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="inputAdult" required>
+              </div>
+              <label for="inputChildren" class="col-sm-2 control-label">小孩</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="inputChildren" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">想去的景點</label>
+              <div class="col-sm-10">
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectTravel1" value="1"> 上野公園
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectTravel2" value="2"> 晴空塔
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectTravel3" value="3"> 秋葉原
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectTravel4" value="4"> 明治神宮
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectTravel5" value="5"> 表參道
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectTravel6" value="6"> 東京迪士尼樂園
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectTravel7" value="7"> 其他
+                </label>
+                <input type="text" class="form-control" id="travelOther" placeholder="選擇其他請填寫">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">想吃的美食</label>
+              <div class="col-sm-10">
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectFood1" value="1"> 新宿つな八
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectFood2" value="2"> 鳥つね自然洞
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectFood3" value="3"> 築地市場
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectFood4" value="4"> 御徒町天ぷら酒処「天正」
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectFood5" value="5"> 駒形どぜう
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectFood6" value="6"> 其他
+                </label>
+                <input type="text" class="form-control" id="foodOther" placeholder="選擇其他請填寫">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">想住的飯店</label>
+              <div class="col-sm-10">
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectHotel1" value="1"> 成田機場旅館
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectHotel2" value="2"> Kadoya Hotel
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectHotel3" value="3"> 上野三井花園酒店
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectHotel4" value="4"> 品川王子大飯店
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectHotel5" value="5"> The Gate Hotel 雷門
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="selectHotel6" value="6"> 其他
+                </label>
+                <input type="text" class="form-control" id="hotelOther" placeholder="選擇其他請填寫">
+              </div>
+            </div>
+            <hr>
+            <div class="form-group">
+              <div class="col-sm-6">
+                <button type="reset" class="btn btn-default btn-block">重填</button>
+              </div>
+              <div class="col-sm-6">
+                <button type="submit" class="btn btn-primary btn-block" id="submit" form="shoppingForm">送出</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="asideNav">
+          <p><a href="tokyoTravel.html" class="navLink">東京必去景點</a></p>
+          <p><a href="tokyoFood.html" class="navLink">東京必吃美食</a></p>
+          <p><a href="tokyoHotel.html" class="navLink">東京推薦住宿</a></p>
+          <p><a href="tokyoForm.html" class="navLinkShopping">立即訂購行程</a></p>
+        </div>
+        <div class="setDate">
+          <h3>實用連結</h3>
+          <p><a href="https://www.gotokyo.org/tc/" target="_blank">東京的官方觀光網站</a></p>
+          <p><a href="http://www.welcome2japan.tw/index.html" target="_blank">日本政府觀光局</a></p>
+          <p><a href="http://www.tokyometro.jp/tcn/" target="_blank">東京Metro地鐵官方網站</a></p>
+          <p><a href="https://www.jreast.co.jp/tc/index.html" target="_blank">JR東日本</a></p>
+          <p><a href="http://www.backpackers.com.tw/forum/" target="_blank">背包客棧</a></p>
+        </div>
+        <div class="hotArticle">
+          <h3>東京熱門</h3>
+          <div class="media">
+            <a class="media-left travel6" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/disney_small.jpg" alt="東京迪士尼樂園" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink travel6" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">東京迪士尼樂園</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 499</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left travel2" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/skytree_small.jpg" alt="晴空塔" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink travel2" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">晴空塔</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 352</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left food3" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/Tsukiji_small.jpg" alt="築地市場" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink food3" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">築地市場</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 332</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left food1" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/tsuna_small.jpg" alt="新宿つな八" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink food1" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">新宿つな八</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 318</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left hotel4" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/prince_small.jpg" alt="品川王子大飯店" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink hotel4" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">品川王子大飯店</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 225</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left travel5" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/omote_small.jpg" alt="表參道" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink travel5" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">表參道</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 159</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left hotel3" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/mitsui_small.jpg" alt="上野三井花園酒店" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink hotel3" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">上野三井花園酒店</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 144</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">詳細資訊</h4>
+        </div>
+        <div class="modal-body">
+          
+          
+          <!-- 照片輪播 -->
+          <div id="carousel-information" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img id="spotPhoto1">
+                <div class="carousel-caption" id="photoCaption1">
+                  
+                </div>
+              </div>
+              <div class="item">
+                <img id="spotPhoto2">
+                <div class="carousel-caption" id="photoCaption2">
+                  
+                </div>
+              </div>
+              <div class="item">
+                <img id="spotPhoto3">
+                <div class="carousel-caption" id="photoCaption3">
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-information" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-information" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="row detail">
+            <div class="col-md-5">
+              <h4 id="spotName"></h4>
+              <p><b>電話：</b><span id="spotPhone"></span></p>
+              <p><b>地址：</b><span id="spotAddr"></span></p>
+              <p><b><span id="spotTimeTitle">營業時間</span>：</b><span id="spotTime"></span></p>
+              <p><a target="_blank" id="spotLink"><span id="spotLinkText"></span></a></p>
+              <p id="spotDescription"></p>
+            </div>
+            <div class="col-md-7">
+              <iframe width="100%" height="300" id="spotMap" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  $('#shoppingForm').submit(function() {
+    alert('已收到您的訂單！\n我們將幫您安排量身定做的行程，請耐心等候聯絡，以處理後續事宜，祝您旅途愉快。');
+  });
+</script>
+</body>
+</html>
+

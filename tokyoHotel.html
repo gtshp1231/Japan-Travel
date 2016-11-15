@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TOKYO GO GO</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- jQuery CDN (for Bootstrap JS) -->
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<!-- 最新編譯和最佳化的 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<!-- 選擇性佈景主題 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<!-- 最新編譯和最佳化的 JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/tokyo.css">
+  <link rel="stylesheet" type="text/css" href="css/tokyoTravel.css">
+
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+
+  <script type="text/javascript" src="js/tokyo.js"></script>
+  <script type="text/javascript" src="js/shopData.js"></script>
+
+</head>
+<body>
+
+<!-- 照片輪播 -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="media/carousel_pic1.jpg" alt="TOKYO">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+      <img src="media/carousel_pic2.jpg" alt="TOKYO">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+      <img src="media/carousel_pic3.jpg" alt="TOKYO">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- 巡覽列 -->
+<nav class="navbar navbar-default">
+	<div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="media/tokyogogo.png"></a>
+    </div>
+	<div id="mynav" class="collapse navbar-collapse">
+		<ul class="navbar-nav nav">
+			<li><a href="tokyoTravel.html"><span class="glyphicon glyphicon-map-marker"></span> 必去景點</a></li>
+      <li><a href="tokyoFood.html"><span class="glyphicon glyphicon-cutlery"></span> 必吃美食</a></li>
+      <li><a href="tokyoHotel.html"><span class="glyphicon glyphicon-home"></span> 推薦住宿</a></li>
+      <li><a href="tokyoForm.html"><span class="glyphicon glyphicon-shopping-cart"></span> 訂購行程</a></li>
+      <li><a href="mailto:gtshp1231@hotmail.com"><span class="glyphicon glyphicon-envelope"></span> 聯絡我們</a></li>
+		</ul>
+	</div>
+	</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="previewTitle">
+          <ul id="hotelTitle">
+            <li><h1 id="mainTitle">東京推薦住宿</h1></li>
+          </ul>
+          <hr class="titleDivide">
+        </div>
+        <div class="previewContent">
+          <div class="media">
+            <a class="media-left hotel1" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/narita_small.jpg" alt="成田機場旅館" class="introPic">
+            </a>
+            <div class="media-body">
+              <a href="#" class="intro hotel1" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading">成田機場旅館</h4>
+                廉價航空便宜，許多人喜歡搭乘，但有些廉價航空的班機時間不是很早就是很晚，有些人可能會選擇直接睡在機場大廳，但現在你可以考慮成田機場旅館。它位於成田機場一、二航站之間，步行至一航站5分鐘，至二航站10分鐘，是搭乘廉航時的好選擇。
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left hotel2" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/kadoya_small.jpg" alt="Kadoya Hotel" class="introPic">
+            </a>
+            <div class="media-body">
+              <a href="#" class="intro hotel2" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading">Kadoya Hotel</h4>
+                Kadoya Hotel位於新宿西口，地理位置極為方便，從新宿西口步行5分鐘內即可到達，都營大江戶線也在步行範圍之內，去哪裡都很方便。除此之外飯店附近還有大型電器賣場、24小時便利商店等，生活機能非常良好！
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left hotel3" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/mitsui_small.jpg" alt="上野三井花園酒店" class="introPic">
+            </a>
+            <div class="media-body">
+              <a href="#" class="intro hotel3" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading">上野三井花園酒店</h4>
+                上野區域有小吃、藥妝多的阿美橫町，還有知名的上野公園與動物園，想逛電器也有大型電器賣場，要什麼有什麼。座落在上野的三井花園酒店屬於較高級的飯店，住在這不僅能好好放鬆身心，外頭也有許多好吃好玩的地方～
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left hotel4" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/prince_small.jpg" alt="品川王子大飯店" class="introPic">
+            </a>
+            <div class="media-body">
+              <a href="#" class="intro hotel4" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading">品川王子大飯店</h4>
+                品川王子大飯店位於JR品川車站的正對面，而品川車站位於山手線上，山手線環繞東京市區，去哪裡都方便。而飯店本身就像大型百貨一樣，結合了百貨公司、電影院、水族館、保齡球館等等，想住在這一整天都不出門也可以！
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left hotel5" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/gate_small.jpg" alt="The Gate Hotel 雷門" class="introPic">
+            </a>
+            <div class="media-body">
+              <a href="#" class="intro hotel5" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading">The Gate Hotel 雷門</h4>
+                淺草雷門是東京的代表性景點之一，不遠處還有晴空塔，住在這裡要到達這些景點就十分方便。The Gate Hotel於2012年夏天剛開幕，算是很新的飯店，房間大又富有設計感，更棒的是，從窗戶就可看到清楚的晴空塔！
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="asideNav">
+          <p><a href="tokyoTravel.html" class="navLink">東京必去景點</a></p>
+          <p><a href="tokyoFood.html" class="navLink">東京必吃美食</a></p>
+          <p><a href="tokyoHotel.html" class="navLink">東京推薦住宿</a></p>
+          <p><a href="tokyoForm.html" class="navLinkShopping">立即訂購行程</a></p>
+        </div>
+        <div class="setDate">
+          <h3>實用連結</h3>
+          <p><a href="https://www.gotokyo.org/tc/" target="_blank">東京的官方觀光網站</a></p>
+          <p><a href="http://www.welcome2japan.tw/index.html" target="_blank">日本政府觀光局</a></p>
+          <p><a href="http://www.tokyometro.jp/tcn/" target="_blank">東京Metro地鐵官方網站</a></p>
+          <p><a href="https://www.jreast.co.jp/tc/index.html" target="_blank">JR東日本</a></p>
+          <p><a href="http://www.backpackers.com.tw/forum/" target="_blank">背包客棧</a></p>
+        </div>
+        <div class="hotArticle">
+          <h3>東京熱門</h3>
+          <div class="media">
+            <a class="media-left travel6" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/disney_small.jpg" alt="迪士尼樂園" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink travel6" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">迪士尼樂園</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 499</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left travel2" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/skytree_small.jpg" alt="晴空塔" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink travel2" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">晴空塔</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 352</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left food3" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/Tsukiji_small.jpg" alt="築地市場" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink food3" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">築地市場</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 332</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left food1" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/tsuna_small.jpg" alt="新宿つな八" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink food1" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">新宿つな八</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 318</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left hotel4" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/prince_small.jpg" alt="品川王子大飯店" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink hotel4" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">品川王子大飯店</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 225</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left travel5" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/omote_small.jpg" alt="表參道" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink travel5" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">表參道</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 159</span>
+              </a>
+            </div>
+          </div>
+          <div class="media">
+            <a class="media-left hotel3" href="#" data-toggle="modal" data-target="#myModal">
+              <img src="media/mitsui_small.jpg" alt="上野三井花園酒店" class="img-circle" width="50">
+            </a>
+            <div class="media-body">
+              <a href="#" class="hotLink hotel3" data-toggle="modal" data-target="#myModal">
+                <h4 class="media-heading hotName">上野三井花園酒店</h4>
+                <span class="hotView"><span class="glyphicon glyphicon-eye-open"></span> 144</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">詳細資訊</h4>
+        </div>
+        <div class="modal-body">
+          
+          
+          <!-- 照片輪播 -->
+          <div id="carousel-information" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img id="spotPhoto1">
+                <div class="carousel-caption" id="photoCaption1">
+                  
+                </div>
+              </div>
+              <div class="item">
+                <img id="spotPhoto2">
+                <div class="carousel-caption" id="photoCaption2">
+                  
+                </div>
+              </div>
+              <div class="item">
+                <img id="spotPhoto3">
+                <div class="carousel-caption" id="photoCaption3">
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-information" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-information" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="row detail">
+            <div class="col-md-5">
+              <h4 id="spotName"></h4>
+              <p><b>電話：</b><span id="spotPhone"></span></p>
+              <p><b>地址：</b><span id="spotAddr"></span></p>
+              <p><b><span id="spotTimeTitle">價格範圍</span>：</b><span id="spotTime"></span></p>
+              <p><a target="_blank" id="spotLink"><span id="spotLinkText"></span></a></p>
+              <p id="spotDescription"></p>
+            </div>
+            <div class="col-md-7">
+              <iframe width="100%" height="300" id="spotMap" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
